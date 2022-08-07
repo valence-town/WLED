@@ -1,0 +1,13 @@
+[platformio]
+default_envs = esp32_eth_hx711
+
+[env:esp32_eth_hx711]
+board = ${env:esp32_eth.board}
+platform = ${env:esp32_eth.platform}
+platform_packages = ${esp32.platform_packages}
+upload_speed = ${env:esp32_eth.upload_speed}
+build_unflags = ${env:esp32_eth.build_unflags}
+build_flags = ${env:esp32_eth.build_flags} -D USERMOD_HX711_MQTT
+lib_deps = ${env:esp32_eth.lib_deps}
+  HX711@0.7.5
+board_build.partitions = ${env:esp32_eth.board_build.partitions}
